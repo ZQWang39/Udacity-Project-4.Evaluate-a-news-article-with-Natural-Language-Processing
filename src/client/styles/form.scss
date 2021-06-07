@@ -1,0 +1,54 @@
+$text-color:white;
+$result:rgb(226, 35, 13);
+
+.container{
+    background:center / cover url(../img/NLP-background.jpg) no-repeat ;
+
+}
+
+form {
+    border:solid grey;
+    box-shadow: 5px 5px 5px rgb(104, 100, 100);
+    color:$text-color;
+    font-size: 20px;
+    font-weight:bolder;
+    border-radius: 5px;
+    padding: 40px;
+}
+
+input {
+    padding: 5px;
+    width: 100%;
+    line-height: 16px;
+    margin: 10px 0;
+    
+}
+
+
+button {
+    float: right;
+    background-color: grey;
+    color:$text-color;
+    border:none;
+    font-size: 15px;
+    padding: 5px;
+    cursor: pointer;
+    &:hover{
+        background-color: black;
+    }
+}
+
+#errorMessage {
+    color:$result;
+}
+
+.result{
+    color: $text-color;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.analysis {
+    color: $result;
+    font-size: 18px;
+}

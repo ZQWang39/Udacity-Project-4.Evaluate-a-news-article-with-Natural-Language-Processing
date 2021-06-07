@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Natural Language Processing</title>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="title">
+                <h1>Natural Language Processing Project</h1>
+            </div>
+        </header>
+
+        <main class="container">
+            <section >
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <label for="url">Paste your URL here:</label>
+                    <input type="text" id="url" name="url" placeholder="http://www.example.com">
+                    <div id="errorMessage"></div>
+                    <button type="button" id="submit" value="submit"
+                        onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">Submit</button>
+                </form>
+            </section>
+
+            <section>
+                <h1 class="result"> Results:</h1>
+                <div class="analysis">
+                    <div id="model"></div>
+                    <div id="score_tag"></div>
+                    <div id="agreement"></div>
+                    <div id="subjectivity"></div>
+                    <div id="confidence"></div>
+                    <div id="irony"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer class ="footer">
+            <p>Copyright 2021 © Ziqi Wang</p>
+        </footer>
+
+        <script>
+            // Check that service workers are supported
+              if ('serviceWorker' in navigator) {
+                  // Use the window load event to keep the page load performant
+                  window.addEventListener('load', () => {
+                      navigator.serviceWorker.register('/service-worker.js');
+                  });
+              }
+              
+       </script>
+
+    </body>
+</html>
