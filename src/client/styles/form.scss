@@ -14,7 +14,12 @@ form {
     font-weight:bolder;
     border-radius: 5px;
     padding: 40px;
+    &:hover{
+        transform: scale(1.25);
+        transition: .5s;
+    }
 }
+
 
 input {
     padding: 5px;
