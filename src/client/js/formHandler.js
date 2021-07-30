@@ -4,8 +4,9 @@ import "regenerator-runtime/runtime";
     event.preventDefault()
 
     let urlInput = document.getElementById('url').value;
+    let cleanURL = encodeURI(urlInput);
 
-    if (Client.checkForUrl(urlInput)){
+    if (Client.checkForUrl(cleanURL)){
         errorMessage.innerHTML = '';
         postData('http://localhost:8081/urlAnalysis', {url:urlInput})
         .then(function(data){
